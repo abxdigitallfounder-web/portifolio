@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --c-bg: 245 243 239;
+    --c-card: 255 255 255;
+    --c-ink: 26 25 22;
+    --c-muted: 122 120 112;
+    --c-accent: 42 95 232;
+    --c-accent-soft: 235 240 253;
+    --c-line: 227 224 216;
+    --c-stat-bg: 240 237 230;
+  }
+
+  .dark {
+    --c-bg: 14 15 18;
+    --c-card: 24 26 31;
+    --c-ink: 240 238 232;
+    --c-muted: 158 158 150;
+    --c-accent: 121 158 255;
+    --c-accent-soft: 30 40 64;
+    --c-line: 42 44 50;
+    --c-stat-bg: 32 34 40;
+  }
+
+  html, body {
+    @apply bg-bg text-ink font-sans antialiased;
+    font-size: 15px;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .anim-paused { animation-play-state: paused; }
+}
