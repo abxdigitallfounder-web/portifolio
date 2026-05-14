@@ -546,7 +546,7 @@ export default function App() {
             style={{ animationDelay: '0.30s' }}
           >
             <a
-              href="/cv-arthur-batista.pdf"
+              href="https://canva.link/xriwzx81ib5h89s"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-ink/30 bg-transparent px-6 py-2.5 text-[13px] font-medium text-ink transition hover:bg-ink hover:text-bg"
