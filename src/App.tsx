@@ -35,7 +35,7 @@ const experiences = [
       'Estruturei e executei estratégias de campanhas de anúncios em escala, com foco em aquisição e performance para e-commerce.',
       'Monitorei e otimizei métricas-chave (como CPA, ROAS e LTV), garantindo a eficiência do orçamento e o máximo retorno sobre o investimento.',
       'Desenvolvi e aprimorei funis de vendas completos, aplicando técnicas de CRO para maximizar a conversão em cada etapa da jornada do cliente.',
-      'Gerenciei o fluxo de criação e validação de criativos publicitários, orientando a estrégias.',
+      'Gerenciei o fluxo de criação e validação de criativos publicitários, orientando a estratégias.',
     ],
   },
   {
@@ -63,7 +63,7 @@ const education = [
     gpa: 'Concluído',
   },
   {
-    degree: 'Administração de negócios com Inteligencia Artifical',
+    degree: 'Administração de negócios com Inteligencia Artificial',
     school: 'Wharton Online',
     period: 'set 2025 – nov 2025',
     gpa: 'Concluído',
