@@ -1,4 +1,4 @@
-# Portfolio — José Antônio
+# Portfolio — Arthur Batista
 
 Portfolio em **React + TypeScript + Vite + TailwindCSS**, inspirado em layout mobile-first com paleta creme/preto e tipografia DM Sans + DM Serif Display.
 

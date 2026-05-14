@@ -512,7 +512,7 @@ export default function App() {
             <div className="h-56 w-56 overflow-hidden rounded-full md:h-72 md:w-72">
               <img
                 src={avatar}
-                alt="Arthur Batista profile picture"
+                alt="Arthur Batista — Gestor de Tráfego e Performance"
                 className="h-full w-full scale-[1.6] object-cover object-[50%_0%]"
               />
             </div>
