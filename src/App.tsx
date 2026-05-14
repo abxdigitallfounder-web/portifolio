@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
-import { Linkedin, Github, ChevronLeft, ChevronRight, Trophy, X, ZoomIn, ZoomOut, Moon, Sun } from 'lucide-react'
+import { Linkedin, Github, ArrowLeft, ArrowRight, Trophy, X, ZoomIn, ZoomOut, Moon, Sun } from 'lucide-react'
 import avatar from './avatar.jpg'
 import premiacao1 from './premiacoes.png'
 import premiacao2 from './metricas-info.png'
@@ -126,16 +126,6 @@ const awards: Award[] = [
     title: 'Placas de Faturamento',
     description: 'R$ 1.000.000, R$ 500.000 e R$ 100.000 faturados',
   },
-  {
-    src: 'https://placehold.co/800x500/2A5FE8/F5F3EF?text=Premia%C3%A7%C3%A3o+2',
-    title: 'Premiação 2',
-    description: 'Adicione suas conquistas aqui',
-  },
-  {
-    src: 'https://placehold.co/800x500/7A7870/F5F3EF?text=Premia%C3%A7%C3%A3o+3',
-    title: 'Premiação 3',
-    description: 'Adicione mais fotos no array awards',
-  },
 ]
 
 function Carousel({ items }: { items: Award[] }) {
@@ -178,38 +168,44 @@ function Carousel({ items }: { items: Award[] }) {
           ))}
         </div>
 
-        <button
-          type="button"
-          onClick={prev}
-          aria-label="Anterior"
-          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-1.5 text-ink shadow ring-1 ring-line transition hover:scale-110"
-        >
-          <ChevronLeft className="h-4 w-4" />
-        </button>
-        <button
-          type="button"
-          onClick={next}
-          aria-label="Próximo"
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-1.5 text-ink shadow ring-1 ring-line transition hover:scale-110"
-        >
-          <ChevronRight className="h-4 w-4" />
-        </button>
+        {items.length > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={prev}
+              aria-label="Anterior"
+              className="absolute left-2 top-1/2 -translate-y-1/2 p-1 text-ink/80 transition hover:scale-125 hover:text-ink"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              aria-label="Próximo"
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-ink/80 transition hover:scale-125 hover:text-ink"
+            >
+              <ArrowRight className="h-5 w-5" />
+            </button>
+          </>
+        )}
       </div>
 
-      <div className="mt-3 flex items-center justify-center gap-1.5">
-        {items.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => setIndex(i)}
-            aria-label={`Ir para ${i + 1}`}
-            className={
-              'h-1.5 rounded-full transition-all ' +
-              (i === index ? 'w-6 bg-accent' : 'w-1.5 bg-line hover:bg-muted')
-            }
-          />
-        ))}
-      </div>
+      {items.length > 1 && (
+        <div className="mt-3 flex items-center justify-center gap-1.5">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => setIndex(i)}
+              aria-label={`Ir para ${i + 1}`}
+              className={
+                'h-1.5 rounded-full transition-all ' +
+                (i === index ? 'w-6 bg-accent' : 'w-1.5 bg-line hover:bg-muted')
+              }
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
@@ -269,17 +265,17 @@ function PhotoCarousel({ items }: { items: string[] }) {
           type="button"
           onClick={prev}
           aria-label="Anterior"
-          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-1.5 text-ink shadow ring-1 ring-line transition hover:scale-110"
+          className="absolute left-2 top-1/2 -translate-y-1/2 p-1 text-ink/80 transition hover:scale-125 hover:text-ink"
         >
-          <ChevronLeft className="h-4 w-4" />
+          <ArrowLeft className="h-5 w-5" />
         </button>
         <button
           type="button"
           onClick={next}
           aria-label="Próximo"
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-1.5 text-ink shadow ring-1 ring-line transition hover:scale-110"
+          className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-ink/80 transition hover:scale-125 hover:text-ink"
         >
-          <ChevronRight className="h-4 w-4" />
+          <ArrowRight className="h-5 w-5" />
         </button>
       </div>
 
